@@ -1,8 +1,6 @@
-export HAVOC_BUILD_TYPE=Official
 export USE_CCACHE=1
 export SKIP_ABI_CHECKS=true
-export build_type="userdebug"
 
-git -C ./external/selinux remote add can https://github.com/CannedOS/external_selinux
-git -C ./external/selinux fetch can
-git -C ./external/selinux cherry-pick db56d38c06ca4514304eec771a14558b867ab2ff
+git -C ./external/selinux remote add sel_patch https://github.com/Havoc-Devices/X2_selinux_patch
+git -C ./external/selinux fetch sel_patch
+git -C ./external/selinux cherry-pick a2519ea17318d47224cc82b7544620e93af6a03c
